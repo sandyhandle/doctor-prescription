@@ -1,0 +1,16 @@
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: doctor-prescription
+  datasource:
+    url: jdbc:postgresql://${PSQL_HOST:localhost}:5438/doctor_prescription_db
+    username: ${psql_user_name}
+    password: ${psql_password}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
